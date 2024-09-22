@@ -1,10 +1,13 @@
 import "./App.css";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="w-full min-h-screen bg-[#161513]">
+      <div className=" max-w-[1100px] mx-auto p-4">
+        <NavBar />
+      </div>
+    </div>
   );
 }
 
