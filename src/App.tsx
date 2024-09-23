@@ -1,6 +1,7 @@
 import "./App.css";
 import HeaderSection from "./components/HeaderSection";
 import NavBar from "./components/NavBar";
+import ProjectsSection from "./components/ProjectsSection";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className=" max-w-[1100px] mx-auto p-4">
         <NavBar />
         <HeaderSection />
-        <h2 className="text-4xl text-white">About Me</h2>
+        <ProjectsSection />
       </div>
     </div>
   );

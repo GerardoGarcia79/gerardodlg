@@ -14,10 +14,10 @@ const NavBar = () => {
           <a href="/">Home</a>
         </li>
         <li className="hidden md:list-item">
-          <a href="/">About Me</a>
+          <a href="/">Projects</a>
         </li>
         <li className="hidden md:list-item">
-          <a href="/">Projects</a>
+          <a href="/">About Me</a>
         </li>
         <li className="hidden md:list-item">
           <a href="/">Hire Me</a>
