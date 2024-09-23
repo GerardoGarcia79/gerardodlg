@@ -1,8 +1,8 @@
 import { Project } from "../data/projects";
-import ChakraUiBadge from "./ChakraUiBadge";
-import ReactBadge from "./ReactBadge";
-import ReactQueryBadge from "./ReactQueryBadge";
-import TypeScriptBadge from "./TypeScriptBadge";
+import ChakraUiBadge from "./badges/ChakraUiBadge";
+import ReactBadge from "./badges/ReactBadge";
+import ReactQueryBadge from "./badges/ReactQueryBadge";
+import TypeScriptBadge from "./badges/TypeScriptBadge";
 
 interface Props {
   project: Project;

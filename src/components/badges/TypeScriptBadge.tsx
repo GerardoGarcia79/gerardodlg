@@ -1,4 +1,4 @@
-import ts from "../assets/icons/typescript.svg";
+import ts from "../../assets/icons/typescript.svg";
 
 const TypeScriptBadge = () => {
   return (

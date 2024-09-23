@@ -1,4 +1,4 @@
-import chakraUi from "../assets/icons/chakra-ui.svg";
+import chakraUi from "../../assets/icons/chakra-ui.svg";
 
 const ChakraUiBadge = () => {
   return (

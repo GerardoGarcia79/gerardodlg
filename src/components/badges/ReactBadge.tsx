@@ -1,4 +1,4 @@
-import react from "../assets/icons/react.svg";
+import react from "../../assets/icons/react.svg";
 
 const ReactBadge = () => {
   return (

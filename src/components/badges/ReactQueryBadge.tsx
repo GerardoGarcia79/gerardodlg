@@ -1,4 +1,4 @@
-import reactQuery from "../assets/icons/react-query.svg";
+import reactQuery from "../../assets/icons/react-query.svg";
 
 const ReactQueryBadge = () => {
   return (
