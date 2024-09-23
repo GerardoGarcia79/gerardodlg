@@ -1,4 +1,8 @@
 import { Project } from "../data/projects";
+import ChakraUiBadge from "./ChakraUiBadge";
+import ReactBadge from "./ReactBadge";
+import ReactQueryBadge from "./ReactQueryBadge";
+import TypeScriptBadge from "./TypeScriptBadge";
 
 interface Props {
   project: Project;
@@ -18,11 +22,11 @@ const ProjectCard = ({ project }: Props) => {
         <h3 className="text-[#00a8e8] text-3xl font-semibold mb-3">
           {project.title}
         </h3>
-        <div className="mb-3 [&_*]:mr-2">
-          <span className="text-white text-sm">badge 1</span>
-          <span className="text-white text-sm">badge 2</span>
-          <span className="text-white text-sm">badge 3</span>
-          <span className="text-white text-sm">badge 4</span>
+        <div className="mb-3 [&_*]:mr-2 flex">
+          <ReactBadge />
+          <TypeScriptBadge />
+          <ReactQueryBadge />
+          <ChakraUiBadge />
         </div>
         <p className="text-base text-white mb-3">{project.description}</p>
         <div>
