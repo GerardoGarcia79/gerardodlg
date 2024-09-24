@@ -4,6 +4,8 @@ import { Project } from "../data/projects";
 import react from "../assets/icons/react.svg";
 import typeScript from "../assets/icons/typescript.svg";
 import tailwindCss from "../assets/icons/tailwind-css.svg";
+import html from "../assets/icons/html5.svg";
+import css from "../assets/icons/css.svg";
 
 interface Props {
   project: Project;
@@ -14,6 +16,8 @@ const MoreProjectsCard = ({ project }: Props) => {
     React: react,
     TypeScript: typeScript,
     "Tailwind CSS": tailwindCss,
+    HTML: html,
+    CSS: css,
   };
 
   return (

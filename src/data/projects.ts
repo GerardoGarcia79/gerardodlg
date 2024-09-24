@@ -1,6 +1,8 @@
 import gameHub from "../assets/game-hub.webp";
 import eCommerce from "../assets/e-commerce.webp";
 import recipeFinder from "../assets/recipe-finder.webp";
+import expenseTracker from "../assets/expense-tracker.webp";
+import moshify from "../assets/moshify.webp";
 
 export interface Project {
   id: number;
@@ -42,6 +44,26 @@ const projects: Project[] = [
     github: "https://github.com/GerardoGarcia79/recipe-finder-app",
     demo: "https://recipe-finder-app-gamma.vercel.app/",
     img: recipeFinder,
+  },
+  {
+    id: 4,
+    title: "Expense Tracker",
+    stack: ["React", "TypeScript", "Tailwind CSS"],
+    description:
+      "Expense tracker is an web app to manage personal finances. Your can add new expenses with details, filter expenses by category and visualize them with charts as well as the total.",
+    github: "https://github.com/GerardoGarcia79/expense-tracker-app",
+    demo: "https://expense-tracker-app-three-xi.vercel.app/",
+    img: expenseTracker,
+  },
+  {
+    id: 5,
+    title: "Moshify",
+    stack: ["HTML", "CSS"],
+    description:
+      "Landing page of an imaginary cloud hosting company called Moshify.",
+    github: "https://github.com/GerardoGarcia79/moshify",
+    demo: "https://moshifycloudhostingapp.netlify.app/",
+    img: moshify,
   },
 ];
 export default projects;
