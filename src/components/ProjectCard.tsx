@@ -2,6 +2,7 @@ import { Project } from "../data/projects";
 import ChakraUiBadge from "./badges/ChakraUiBadge";
 import ReactBadge from "./badges/ReactBadge";
 import ReactQueryBadge from "./badges/ReactQueryBadge";
+import TailwindCssBadge from "./badges/TailwindCssBadge";
 import TypeScriptBadge from "./badges/TypeScriptBadge";
 import CodeButton from "./buttons/CodeButton";
 import DemoButton from "./buttons/DemoButton";
@@ -11,6 +12,14 @@ interface Props {
 }
 
 const ProjectCard = ({ project }: Props) => {
+  const badges: { [type: string]: JSX.Element } = {
+    React: <ReactBadge />,
+    TypeScript: <TypeScriptBadge />,
+    "Chakra UI": <ChakraUiBadge />,
+    "Tailwind CSS": <TailwindCssBadge />,
+    "React Query": <ReactQueryBadge />,
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
       <div className="flex items-center">
@@ -24,11 +33,8 @@ const ProjectCard = ({ project }: Props) => {
         <h3 className="text-[#00a8e8] text-3xl font-semibold mb-3">
           {project.title}
         </h3>
-        <div className="mb-3 [&_*]:mr-2 flex">
-          <ReactBadge />
-          <TypeScriptBadge />
-          <ReactQueryBadge />
-          <ChakraUiBadge />
+        <div className={`mb-3 [&_*]:mr-2 lg:flex w-full`}>
+          {project.stack.map((technology) => badges[technology])}
         </div>
         <p className="text-base text-white mb-3">{project.description}</p>
         <div className="flex [&_*]:mr-2">
