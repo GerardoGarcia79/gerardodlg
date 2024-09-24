@@ -22,11 +22,11 @@ const ProjectCard = ({ project }: Props) => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
-      <div className="flex items-center">
+      <div className="flex items-center md:items-start">
         <img
           src={project.img}
           alt="Game Hub image"
-          className="w-[95%] rounded-lg transition hover:translate-x-2 hover:translate-y-2 ease-out hover:scale-105 hover:border-2 hover:border-white duration-300"
+          className=" rounded-lg transition ease-out hover:scale-105 hover:border-2 hover:border-white duration-300 md:hover:translate-x-2 md:hover:translate-y-2 md:w-[95%]"
         />
       </div>
       <div className="pl-1">
