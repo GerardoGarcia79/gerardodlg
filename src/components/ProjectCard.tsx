@@ -3,6 +3,8 @@ import ChakraUiBadge from "./badges/ChakraUiBadge";
 import ReactBadge from "./badges/ReactBadge";
 import ReactQueryBadge from "./badges/ReactQueryBadge";
 import TypeScriptBadge from "./badges/TypeScriptBadge";
+import CodeButton from "./buttons/CodeButton";
+import DemoButton from "./buttons/DemoButton";
 
 interface Props {
   project: Project;
@@ -10,15 +12,15 @@ interface Props {
 
 const ProjectCard = ({ project }: Props) => {
   return (
-    <div className="grid grid-cols-2 mt-5">
-      <div className="overflow-hidden pr-4 flex items-center">
+    <div className="grid grid-cols-1 md:grid-cols-2 mt-5">
+      <div className="flex items-center">
         <img
           src={project.img}
           alt="Game Hub image"
-          className="rounded-lg object-cover"
+          className="w-[95%] rounded-lg transition hover:translate-x-2 hover:translate-y-2 ease-out hover:scale-105 hover:border-2 hover:border-white duration-300"
         />
       </div>
-      <div>
+      <div className="pl-1">
         <h3 className="text-[#00a8e8] text-3xl font-semibold mb-3">
           {project.title}
         </h3>
@@ -29,9 +31,9 @@ const ProjectCard = ({ project }: Props) => {
           <ChakraUiBadge />
         </div>
         <p className="text-base text-white mb-3">{project.description}</p>
-        <div>
-          <button className="mr-4 text-white text-lg">Github</button>
-          <button className="text-white text-lg">Preview</button>
+        <div className="flex [&_*]:mr-2">
+          <CodeButton code={project.github} />
+          <DemoButton demo={project.demo} />
         </div>
       </div>
     </div>
