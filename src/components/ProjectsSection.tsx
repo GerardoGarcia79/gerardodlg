@@ -1,10 +1,12 @@
 import projects from "../data/projects";
+import MoreProjects from "./MoreProjects";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
   const gameHub = projects[0];
   const eCommerceStorefront = projects[1];
   const recipeFinder = projects[2];
+  const allProjects = projects;
 
   return (
     <div>
@@ -16,6 +18,7 @@ const ProjectsSection = () => {
         <ProjectCard project={gameHub} />
         <ProjectCard project={eCommerceStorefront} />
         <ProjectCard project={recipeFinder} />
+        <MoreProjects projects={allProjects} />
       </div>
     </div>
   );

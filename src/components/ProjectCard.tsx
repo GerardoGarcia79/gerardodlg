@@ -25,8 +25,8 @@ const ProjectCard = ({ project }: Props) => {
       <div className="flex items-center md:items-start">
         <img
           src={project.img}
-          alt="Game Hub image"
-          className=" rounded-lg transition ease-out hover:scale-105 hover:border-2 hover:border-white duration-300 md:hover:translate-x-2 md:hover:translate-y-2 md:w-[95%]"
+          alt={`${project.title} image`}
+          className=" rounded-lg transition ease-out hover:scale-105 hover:border-2 hover:border-[#00a8e8]/50 duration-300 md:hover:translate-x-2 md:hover:translate-y-2 md:w-[95%]"
         />
       </div>
       <div className="pl-1">
