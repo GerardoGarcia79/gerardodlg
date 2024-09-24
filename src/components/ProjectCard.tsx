@@ -13,11 +13,11 @@ interface Props {
 
 const ProjectCard = ({ project }: Props) => {
   const badges: { [type: string]: JSX.Element } = {
-    React: <ReactBadge />,
-    TypeScript: <TypeScriptBadge />,
-    "Chakra UI": <ChakraUiBadge />,
-    "Tailwind CSS": <TailwindCssBadge />,
-    "React Query": <ReactQueryBadge />,
+    React: <ReactBadge key={1} />,
+    TypeScript: <TypeScriptBadge key={2} />,
+    "Chakra UI": <ChakraUiBadge key={3} />,
+    "Tailwind CSS": <TailwindCssBadge key={4} />,
+    "React Query": <ReactQueryBadge key={5} />,
   };
 
   return (
