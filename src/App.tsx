@@ -1,4 +1,5 @@
 import "./App.css";
+import AboutMe from "./components/AboutMe";
 import HeaderSection from "./components/HeaderSection";
 import NavBar from "./components/NavBar";
 import ProjectsSection from "./components/ProjectsSection";
@@ -12,6 +13,7 @@ function App() {
         <HeaderSection />
         <ProjectsSection />
         <StackSection />
+        <AboutMe />
       </div>
     </div>
   );
