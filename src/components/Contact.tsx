@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import Form from "./Form";
 
 
 
@@ -21,7 +22,7 @@ const Contact = () => {
                 <p className="flex items-center mt-3"><FaLocationDot size='25px' className="mr-3" />
                 Jal, México</p>
             </div>
-            <div></div>
+            <Form />
         </div>
     </div>
   )
