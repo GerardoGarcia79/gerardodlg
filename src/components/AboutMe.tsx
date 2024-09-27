@@ -3,7 +3,7 @@ import gerard from '../assets/photo.webp'
 
 const AboutMe = () => {
   return (
-    <>
+    <div id="about-me">
     <h2 className="text-white text-4xl font-semibold flex mt-5"><FaUserCheck color="#00a8e8" />&nbsp;
     About Me
     </h2>
@@ -15,7 +15,7 @@ const AboutMe = () => {
         </div>
         <div className="flex items-center min-[400px]:w-1/2 min-[400px]:mx-auto md:w-[95%] lg:w-3/4"><img src={gerard} alt="Gerardo's photo" className="rounded-lg" /></div>
     </div>
-    </>
+    </div>
   )
 }
 

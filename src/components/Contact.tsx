@@ -9,7 +9,7 @@ import Form from "./Form";
 
 const Contact = () => {
   return (
-    <div className="my-5">
+    <div id="contact" className="my-5">
         <h2 className="text-white font-semibold text-4xl mb-5"><FontAwesomeIcon icon={faAddressBook} color="#00a8e8" />&nbsp;
         Contact</h2>
         <div className="grid grid-cols-1 md:grid-cols-2">

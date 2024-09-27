@@ -11,16 +11,16 @@ const NavBar = () => {
           <FontAwesomeIcon icon={faBars} className="w-8 h-8 md:hidden" />
         </li>
         <li className="hidden md:list-item">
-          <a href="/">Home</a>
+          <a href="#header">Home</a>
         </li>
         <li className="hidden md:list-item">
-          <a href="/">Projects</a>
+          <a href="#projects">Projects</a>
         </li>
         <li className="hidden md:list-item">
-          <a href="/">About Me</a>
+          <a href="#about-me">About Me</a>
         </li>
         <li className="hidden md:list-item">
-          <a href="/">Hire Me</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </div>

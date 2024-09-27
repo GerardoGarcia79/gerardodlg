@@ -5,7 +5,7 @@ import { faSquareGithub } from "@fortawesome/free-brands-svg-icons/faSquareGithu
 
 const HeaderSection = () => {
   return (
-    <div className="grid grid-cols-1 gap-y-5 my-6 py-[25px] lg:grid-cols-3 md:gap-y-0 md:py-[100px] lg:py-[250px]">
+    <div id="header" className="grid grid-cols-1 gap-y-5 my-6 py-[25px] lg:grid-cols-3 md:gap-y-0 md:py-[100px] lg:py-[250px]">
       <div className="md:col-span-2">
         <h1 className="text-white font-bold text-5xl mb-5">
           Hi, I'm <span className="text-[#00a8e8] ">Gerardo De León, </span>

@@ -9,7 +9,7 @@ const ProjectsSection = () => {
   const allProjects = projects;
 
   return (
-    <div>
+    <div id="projects">
       <h2 className="text-4xl text-white font-semibold">
         {" "}
         <span className="text-[#00a8e8]">{`</ >`}</span> Projects
