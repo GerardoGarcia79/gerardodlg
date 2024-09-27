@@ -1,6 +1,7 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import HeaderSection from "./components/HeaderSection";
 import NavBar from "./components/NavBar";
 import ProjectsSection from "./components/ProjectsSection";
@@ -16,6 +17,7 @@ function App() {
         <StackSection />
         <AboutMe />
         <Contact />
+        <Footer />
       </div>
     </div>
   );
