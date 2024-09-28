@@ -1,14 +1,34 @@
-
-import logoWhite from "../assets/logo-white.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+  const changeBg = () => window.scrollY >= 50 ? setIsScrolled(true) : setIsScrolled(false)
+  
+  window.addEventListener('scroll', changeBg)
+  
   return (
-    <div className="hidden md:w-full md:p-4 md:flex md:justify-between md:items-center">
-      <img src={logoWhite} alt="Logo" className="w-44 md:w-36" />
-      
-      <button>Hire Me</button>
+    <>
+    <FontAwesomeIcon icon={faBars} className="w-9 h-9 md:hidden fixed top-2 right-2 text-white z-10" />
+    <div className={`${ isScrolled ? 'bg-[#414141]' : ''} rounded-full fixed w-fit text-center top-1 left-1/2 -translate-x-1/2 z-10`}>
+        <ul className="flex justify-center text-white text-base md:[&_*]:p-2">
+            <li className="hidden md:list-item">
+              <a href="#header">Home</a>
+            </li>
+            <li className="hidden md:list-item">
+              <a href="#projects">Projects</a>
+            </li>
+            <li className="hidden md:list-item">
+              <a href="#about-me">About Me</a>
+            </li>
+            <li className="hidden md:list-item">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
     </div>
-  );
-};
+    </>
+  )
+}
 
-export default NavBar;
+export default NavBar

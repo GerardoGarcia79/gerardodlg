@@ -3,7 +3,7 @@ import gerardo from "../assets/face.webp";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons/faSquareGithub";
 
-const HeaderSection = () => {
+const MainSection = () => {
   return (
     <div id="header" className="grid grid-cols-1 gap-y-5 my-6 py-[25px] lg:grid-cols-3 md:gap-y-0 md:py-[100px] lg:py-[250px]">
       <div className="md:col-span-2">
@@ -48,4 +48,4 @@ const HeaderSection = () => {
   );
 };
 
-export default HeaderSection;
+export default MainSection;
