@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="py-5 md:flex md:justify-between md:py-8">
             <p className="flex items-center text-white mb-2 md:mb-0">©Gerardo de León García. Almost all rights reserved. </p>
             <div className="flex">
-            <a href="/" className="flex items-center text-white mr-5 bg-[#00a8e8] rounded-lg p-1 hover:bg-[#0081b4] transition ease-out hover:-translate-y-1 hover:scale-110 duration-300">Contact</a>
+            <a href="mailto:gerardodlg.dev@gmail.com" className="flex items-center text-white mr-5 bg-[#00a8e8] rounded-lg p-1 hover:bg-[#0081b4] transition ease-out hover:-translate-y-1 hover:scale-110 duration-300">Contact</a>
             <a
             href="https://www.linkedin.com/in/gerardo-de-le%C3%B3n-garc%C3%ADa/"
             target="_blank"
