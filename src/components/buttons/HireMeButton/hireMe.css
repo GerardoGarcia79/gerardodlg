@@ -5,7 +5,7 @@
 }
 
 .hire-me::after, .hire-me::before {
-    background-image: conic-gradient(from var(--angle) ,transparent 50%, white);
+    background-image: conic-gradient(from var(--angle) ,transparent 1%, white);
     animation: 2s spin linear infinite;
 }
 
