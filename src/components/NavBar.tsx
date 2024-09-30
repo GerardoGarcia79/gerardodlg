@@ -1,8 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
-import { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { FaDesktop } from "react-icons/fa";
 import { faX } from "@fortawesome/free-solid-svg-icons/faX";
+import { MdLightMode } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
+
+
+
 
 const NavBar = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system');
@@ -16,6 +21,12 @@ const NavBar = () => {
   window.addEventListener('scroll', changeBg);
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   
+  const themes: Record<string, ReactNode> = {
+    'light': <MdLightMode size='20px' className="text-white"/>,
+    'dark': <FaMoon size='20px' className="text-white"/>,
+    'system': <FaDesktop size='20px' className="text-white"/>
+  }
+
   useEffect(() => {
     const onWindowMatch = () => {
       if(
@@ -84,7 +95,7 @@ const NavBar = () => {
                 <a href="#contact">Contact</a>
               </li>
             </ul>
-            <button ref={themeButtonRef} onClick={(() => setShowSelectTheme(!showSelectTheme))} className=" text-white md:p-2 md:block"><FaDesktop size='20px' /></button>
+            <button ref={themeButtonRef} onClick={(() => setShowSelectTheme(!showSelectTheme))} className=" text-white md:p-2 md:block">{themes[theme!]}</button>
             <div ref={themeMenuRef} className={`md:fixed md:top-[40px] md:right-0 md:w-28 md:border-[1px] md:border-white md:p-1 md:rounded-lg md:bg-[#414141] md:text-start ${showSelectTheme ? 'visible opacity-100 transition-all ease-in-out duration-300' : 'invisible opacity-0 transition-all ease-in-out duration-300'}`}>
               <ul className="text-white">
                 <li onClick={() => {
