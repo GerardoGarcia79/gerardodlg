@@ -2,12 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import { useEffect, useState } from "react";
 import { FaDesktop } from "react-icons/fa";
+import { faX } from "@fortawesome/free-solid-svg-icons/faX";
 
 const NavBar = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system')
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system');
   const [showSelectTheme, setShowSelectTheme] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false)
-  const changeBg = () => window.scrollY >= 50 ? setIsScrolled(true) : setIsScrolled(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(true);
+  const changeBg = () => window.scrollY >= 50 ? setIsScrolled(true) : setIsScrolled(false);
   window.addEventListener('scroll', changeBg);
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   
@@ -41,25 +43,26 @@ const NavBar = () => {
 
   return (
     <>
-    <FontAwesomeIcon icon={faBars} className="w-9 h-9 md:hidden fixed top-2 right-2 text-white z-10" />
-    <div className={`${ isScrolled ? 'bg-[#414141]' : ''} rounded-full fixed w-fit text-center top-4 left-1/2 -translate-x-1/2 z-10`}>
-        <div className="flex">
-          <ul className="flex justify-center text-white text-base text-nowrap md:[&_*]:p-2">
-              <li className="hidden md:list-item">
+    <FontAwesomeIcon onClick={() => setShowNavBar(true)} icon={faBars} className={`w-9 h-9 fixed top-2 right-2 text-white z-10 cursor-pointer md:hidden ${showNavBar ? 'hidden' : ''}`} />
+    <FontAwesomeIcon onClick={() => setShowNavBar(false)} icon={faX} className={`w-9 h-9 fixed top-2 right-2 text-white z-10 cursor-pointer md:hidden ${showNavBar ? '' : 'hidden'}`} />
+    <div className={`${ isScrolled ? 'md:bg-[#414141]' : 'md:bg-inherit'} ${showNavBar ? 'fixed right-0 top-0 w-60 bg-[#00a8e8] h-full' : 'fixed -right-60 top-0 w-60 bg-[#00a8e8] h-full'} transition-[right] md:h-fit duration-500 ease-in-out md:rounded-full md:fixed md:w-fit md:text-center md:top-4 md:left-1/2 md:-translate-x-1/2 md:z-10`}>
+        <div className='py-12 px-5 md:py-0 md:px-0 md:flex'>
+          <ul className="text-2xl text-white [&_*]:my-4 md:[&_*]:my-0 md:flex md:justify-center md:text-base md:text-nowrap md:[&_*]:p-2">
+              <li className=" md:list-item">
                 <a href="#header">Home</a>
               </li>
-              <li className="hidden md:list-item">
+              <li className=" md:list-item">
                 <a href="#projects">Projects</a>
               </li>
-              <li className="hidden md:list-item">
+              <li className=" md:list-item">
                 <a href="#about-me">About Me</a>
               </li>
-              <li className="hidden md:list-item">
+              <li className=" md:list-item">
                 <a href="#contact">Contact</a>
               </li>
             </ul>
-            <button onClick={(() => setShowSelectTheme(!showSelectTheme))} className="text-white p-2"><FaDesktop size='20px' /></button>
-            <div className={`fixed top-[40px] right-0  w-28 border-[1px] border-white p-1 rounded-lg bg-[#414141] text-start ${showSelectTheme ? '' : 'hidden'}`}>
+            <button onClick={(() => setShowSelectTheme(!showSelectTheme))} className=" text-white md:p-2 md:block"><FaDesktop size='20px' /></button>
+            <div className={`md:fixed md:top-[40px] md:right-0  md:w-28 md:border-[1px] md:border-white md:p-1 md:rounded-lg md:bg-[#414141] md:text-start ${showSelectTheme ? '' : 'hidden'}`}>
               <ul className="text-white">
                 <li onClick={() => {
                   setTheme('light');
