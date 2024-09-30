@@ -1,15 +1,44 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaDesktop } from "react-icons/fa";
 
-
 const NavBar = () => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system')
   const [showSelectTheme, setShowSelectTheme] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false)
   const changeBg = () => window.scrollY >= 50 ? setIsScrolled(true) : setIsScrolled(false)
-  window.addEventListener('scroll', changeBg)
+  window.addEventListener('scroll', changeBg);
+  const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   
+  useEffect(() => {
+    const onWindowMatch = () => {
+      if(
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && darkQuery.matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+
+    switch (theme) {
+      case 'dark':
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        break;
+      case 'light':
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        break;
+      default:
+        localStorage.removeItem('theme');
+        onWindowMatch()
+        break;
+    }
+  }, [theme, darkQuery.matches])
+
   return (
     <>
     <FontAwesomeIcon icon={faBars} className="w-9 h-9 md:hidden fixed top-2 right-2 text-white z-10" />
@@ -32,9 +61,18 @@ const NavBar = () => {
             <button onClick={(() => setShowSelectTheme(!showSelectTheme))} className="text-white"><FaDesktop size='20px' /></button>
             <div className={`fixed top-[40px] right-0  w-28 border-[1px] border-white p-1 rounded-lg bg-[#414141] text-start ${showSelectTheme ? '' : 'hidden'}`}>
               <ul className="text-white">
-                <li className="hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Light</li>
-                <li className="hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Dark</li>
-                <li className="hover:bg-[#616161] rounded-md pl-1 cursor-default">System</li>
+                <li onClick={() => {
+                  setTheme('light');
+                  setShowSelectTheme(!showSelectTheme);
+                  }} className="hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Light</li>
+                <li onClick={() => {
+                  setTheme('dark');
+                  setShowSelectTheme(!showSelectTheme);
+                  }} className="hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Dark</li>
+                <li onClick={() => {
+                  setTheme('system');
+                  setShowSelectTheme(!showSelectTheme);
+                  }} className="hover:bg-[#616161] rounded-md pl-1 cursor-default">System</li>
               </ul>
             </div>
         </div>
