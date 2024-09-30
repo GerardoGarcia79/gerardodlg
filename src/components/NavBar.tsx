@@ -62,7 +62,7 @@ const NavBar = () => {
               </li>
             </ul>
             <button onClick={(() => setShowSelectTheme(!showSelectTheme))} className=" text-white md:p-2 md:block"><FaDesktop size='20px' /></button>
-            <div className={`md:fixed md:top-[40px] md:right-0  md:w-28 md:border-[1px] md:border-white md:p-1 md:rounded-lg md:bg-[#414141] md:text-start ${showSelectTheme ? '' : 'hidden'}`}>
+            <div className={`md:fixed md:top-[40px] md:right-0 md:w-28 md:border-[1px] md:border-white md:p-1 md:rounded-lg md:bg-[#414141] md:text-start ${showSelectTheme ? 'visible opacity-100 transition-all ease-in-out duration-300' : 'invisible opacity-0 transition-all ease-in-out duration-300'}`}>
               <ul className="text-white">
                 <li onClick={() => {
                   setTheme('light');
