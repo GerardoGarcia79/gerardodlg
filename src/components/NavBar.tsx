@@ -77,9 +77,9 @@ const NavBar = () => {
 
   return (
     <>
-    <FontAwesomeIcon onClick={() => setShowNavBar(true)} icon={faBars} className={`w-9 h-9 fixed top-2 right-2 text-white z-10 cursor-pointer md:hidden ${showNavBar ? 'hidden' : ''}`} />
-    <FontAwesomeIcon onClick={() => setShowNavBar(false)} icon={faX} className={`w-9 h-9 fixed top-2 right-2 text-white z-10 cursor-pointer md:hidden ${showNavBar ? '' : 'hidden'}`} />
-    <div ref={menuRef} className={`${ isScrolled ? 'md:bg-[#414141]' : 'md:bg-inherit'} ${showNavBar ? 'fixed right-0 top-0 w-60 bg-[#00a8e8] h-full' : 'fixed -right-60 top-0 w-60 bg-[#00a8e8] h-full'} transition-[right] md:h-fit duration-500 ease-in-out md:rounded-full md:fixed md:w-fit md:text-center md:top-4 md:left-1/2 md:-translate-x-1/2 md:z-10`}>
+    <FontAwesomeIcon onClick={() => setShowNavBar(true)} icon={faBars} className={`w-9 h-9 fixed top-2 right-2 text-white z-20 cursor-pointer md:hidden ${showNavBar ? 'hidden' : ''}`} />
+    <FontAwesomeIcon onClick={() => setShowNavBar(false)} icon={faX} className={`w-9 h-9 fixed top-2 right-2 text-white z-20 cursor-pointer md:hidden ${showNavBar ? '' : 'hidden'}`} />
+    <div ref={menuRef} className={`${ isScrolled ? 'md:bg-[#414141]' : 'md:bg-inherit'} z-10 ${showNavBar ? 'fixed right-0 top-0 w-60 bg-[#00a8e8] h-full' : 'fixed -right-60 top-0 w-60 bg-[#00a8e8] h-full'} transition-[right] md:h-fit duration-500 ease-in-out md:rounded-full md:fixed md:w-fit md:text-center md:top-4 md:left-1/2 md:-translate-x-1/2 md:z-10`}>
         <div className='py-12 px-5 md:py-0 md:px-0 md:flex'>
           <ul className="text-2xl text-white [&_*]:my-4 md:[&_*]:my-0 md:flex md:justify-center md:text-base md:text-nowrap md:[&_*]:p-2">
               <li className=" md:list-item">
