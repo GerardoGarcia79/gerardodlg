@@ -21,19 +21,19 @@ const MoreProjectsCard = ({ project }: Props) => {
   };
 
   return (
-    <div className="p-4 mt-5 border-2 border-white/10 rounded-lg transition ease-out hover:scale-105 duration-300 hover:border-[#00a8e8]/50">
+    <div className="p-4 mt-5 border-2 border-black/10 dark:border-white/10 rounded-lg transition ease-out hover:scale-105 duration-300 hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50">
       <div className="flex justify-end ">
         <a
           target="_blank"
           href={project.github}
-          className="text-white transition ease-out hover:scale-125 duration-300 hover:text-[#00a8e8]"
+          className="transition ease-out hover:scale-125 duration-300 hover:text-[#00a8e8]"
         >
           <FiGithub size="25px" className="mr-3" />
         </a>
         <a
           target="_blank"
           href={project.demo}
-          className="text-white transition ease-out hover:scale-125 duration-300 hover:text-[#00a8e8]"
+          className="transition ease-out hover:scale-125 duration-300 hover:text-[#00a8e8]"
         >
           <IoIosLink size="25px" />
         </a>
@@ -41,7 +41,7 @@ const MoreProjectsCard = ({ project }: Props) => {
       <h2 className="text-3xl font-semibold text-[#00a8e8] mb-2">
         {project.title}
       </h2>
-      <p className="text-base text-white">{project.description}</p>
+      <p className="text-base">{project.description}</p>
       <div className="flex justify-center [&_*]:mr-2 mt-3">
         {project.stack.map((technology, index) => (
           <span key={index}>

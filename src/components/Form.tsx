@@ -32,16 +32,16 @@ const Form = () => {
   return (
     <div>
     <form onSubmit={ onSubmit }>
-        <p className="text-white mb-2">Your Name</p>
-        <input type="text" ref={nameRef} name="name" required placeholder="Enter your name" className="w-full p-3 rounded-md bg-[#303030] text-white focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"/>
-        <p className="text-white my-2">Your Email</p>
-        <input type="email" ref={emailRef} name="email" required placeholder="Enter your email" className="w-full p-3 rounded-md bg-[#303030] text-white focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"/>
-        <p className="text-white my-2">Write your message here</p>
-        <textarea name="message" ref={textRef} required placeholder="Enter your message" className="w-full p-3 rounded-md bg-[#303030] text-white h-[150px] focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"></textarea>
-        <button className="rounded-full bg-[#00a8e8] py-4 px-8 text-lg mt-3 text-white hover:bg-[#0081b4] transition ease-out hover:scale-110 duration-300" type="submit">Submit Now</button>
+        <p className="mb-2">Your Name</p>
+        <input type="text" ref={nameRef} name="name" required placeholder="Enter your name" className="placeholder-black dark:placeholder-white w-full p-3 rounded-md bg-[#dcd8d9] dark:bg-[#303030] focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"/>
+        <p className="my-2">Your Email</p>
+        <input type="email" ref={emailRef} name="email" required placeholder="Enter your email" className="placeholder-black dark:placeholder-white w-full p-3 rounded-md bg-[#dcd8d9] dark:bg-[#303030] focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"/>
+        <p className="my-2">Write your message here</p>
+        <textarea name="message" ref={textRef} required placeholder="Enter your message" className="placeholder-black dark:placeholder-white w-full p-3 rounded-md bg-[#dcd8d9] dark:bg-[#303030] h-[150px] focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"></textarea>
+        <button className="rounded-full bg-[#00a8e8] py-4 px-8 text-lg mt-3 hover:bg-[#0081b4] transition ease-out hover:scale-110 duration-300" type="submit">Submit Now</button>
     </form>
-    {error && <p className="text-white mt-3 ">{error}</p>}
-    {message && <p className="text-white mt-3 ">{message}</p>}
+    {error && <p className="mt-3 ">{error}</p>}
+    {message && <p className="mt-3 ">{message}</p>}
     </div>
   )
 }

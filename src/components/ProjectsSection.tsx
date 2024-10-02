@@ -10,7 +10,7 @@ const ProjectsSection = () => {
 
   return (
     <div id="projects">
-      <h2 className="text-4xl text-white font-semibold">
+      <h2 className="text-4xl font-semibold">
         {" "}
         <span className="text-[#00a8e8]">{`</ >`}</span> Projects
       </h2>

@@ -22,9 +22,9 @@ const NavBar = () => {
   const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
   
   const themes: Record<string, ReactNode> = {
-    'light': <MdLightMode size='20px' className="text-white"/>,
-    'dark': <FaMoon size='20px' className="text-white"/>,
-    'system': <FaDesktop size='20px' className="text-white"/>
+    'light': <MdLightMode size='20px' className="text-black dark:text-white"/>,
+    'dark': <FaMoon size='20px' className="text-black dark:text-white"/>,
+    'system': <FaDesktop size='20px' className="text-black dark:text-white"/>
   }
 
   useEffect(() => {
@@ -77,11 +77,11 @@ const NavBar = () => {
 
   return (
     <>
-    <FontAwesomeIcon onClick={() => setShowNavBar(true)} icon={faBars} className={`w-9 h-9 fixed top-2 right-2 text-white z-20 cursor-pointer md:hidden ${showNavBar ? 'hidden' : ''}`} />
-    <FontAwesomeIcon onClick={() => setShowNavBar(false)} icon={faX} className={`w-9 h-9 fixed top-2 right-2 text-white z-20 cursor-pointer md:hidden ${showNavBar ? '' : 'hidden'}`} />
-    <div ref={menuRef} className={`${ isScrolled ? 'md:bg-[#414141]' : 'md:bg-inherit'} z-10 ${showNavBar ? 'fixed right-0 top-0 w-60 bg-[#00a8e8] h-full' : 'fixed -right-60 top-0 w-60 bg-[#00a8e8] h-full'} transition-[right] md:h-fit duration-500 ease-in-out md:rounded-full md:fixed md:w-fit md:text-center md:top-4 md:left-1/2 md:-translate-x-1/2 md:z-10`}>
+    <FontAwesomeIcon onClick={() => setShowNavBar(true)} icon={faBars} className={`w-9 h-9 fixed top-2 right-2 text-black dark:text-white z-20 cursor-pointer md:hidden ${showNavBar ? 'hidden' : ''}`} />
+    <FontAwesomeIcon onClick={() => setShowNavBar(false)} icon={faX} className={`w-9 h-9 fixed top-2 right-2 text-black dark:text-white z-20 cursor-pointer md:hidden ${showNavBar ? '' : 'hidden'}`} />
+    <div ref={menuRef} className={`${ isScrolled ? 'md:bg-[#dcd8d9] md:dark:bg-[#414141]' : 'md:bg-inherit'} z-10 ${showNavBar ? 'fixed right-0 top-0 w-60 bg-[#00a8e8] h-full' : 'fixed -right-60 top-0 w-60 bg-[#00a8e8] h-full'} transition-[right] md:h-fit duration-500 ease-in-out md:rounded-full md:fixed md:w-fit md:text-center md:top-4 md:left-1/2 md:-translate-x-1/2 md:z-10`}>
         <div className='py-12 px-5 md:py-0 md:px-0 md:flex'>
-          <ul className="text-2xl text-white [&_*]:my-4 md:[&_*]:my-0 md:flex md:justify-center md:text-base md:text-nowrap md:[&_*]:p-2">
+          <ul className="text-2xl [&_*]:my-4 md:[&_*]:my-0 md:flex md:justify-center md:text-base md:text-nowrap md:[&_*]:p-2">
               <li className=" md:list-item">
                 <a href="#header">Home</a>
               </li>
@@ -95,21 +95,21 @@ const NavBar = () => {
                 <a href="#contact">Contact</a>
               </li>
             </ul>
-            <button ref={themeButtonRef} onClick={(() => setShowSelectTheme(!showSelectTheme))} className=" text-white md:p-2 md:block">{themes[theme!]}</button>
-            <div ref={themeMenuRef} className={`md:fixed md:top-[40px] md:right-0 md:w-28 md:border-[1px] md:border-white md:p-1 md:rounded-lg md:bg-[#414141] md:text-start ${showSelectTheme ? 'visible opacity-100 transition-all ease-in-out duration-300' : 'invisible opacity-0 transition-all ease-in-out duration-300'}`}>
-              <ul className="text-white">
+            <button ref={themeButtonRef} onClick={(() => setShowSelectTheme(!showSelectTheme))} className=" md:p-2 md:block">{themes[theme!]}</button>
+            <div ref={themeMenuRef} className={`md:fixed md:top-[40px] md:right-0 md:w-28 md:border-[1px] md:border-white md:p-1 md:rounded-lg md:bg-[#dcd8d9] md:dark:bg-[#414141] md:text-start ${showSelectTheme ? 'visible opacity-100 transition-all ease-in-out duration-300' : 'invisible opacity-0 transition-all ease-in-out duration-300'}`}>
+              <ul>
                 <li onClick={() => {
                   setTheme('light');
                   setShowSelectTheme(!showSelectTheme);
-                  }} className="hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Light</li>
+                  }} className="hover:bg-[#bfbfbf] dark:hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Light</li>
                 <li onClick={() => {
                   setTheme('dark');
                   setShowSelectTheme(!showSelectTheme);
-                  }} className="hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Dark</li>
+                  }} className="hover:bg-[#bfbfbf] dark:hover:bg-[#616161] rounded-md pl-1 cursor-default mb-[2px]">Dark</li>
                 <li onClick={() => {
                   setTheme('system');
                   setShowSelectTheme(!showSelectTheme);
-                  }} className="hover:bg-[#616161] rounded-md pl-1 cursor-default">System</li>
+                  }} className="hover:bg-[#bfbfbf] dark:hover:bg-[#616161] rounded-md pl-1 cursor-default">System</li>
               </ul>
             </div>
         </div>
