@@ -4,7 +4,8 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons/faSquareGithub";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { useEffect, useRef, useState } from "react";
-import CvEnglish from '../assets/CV/CV-EN.pdf'
+import Resume from '../assets/Resume/Resume.pdf'
+import ResumeES from '../assets/Resume/Resume-ES.pdf'
 
 const MainSection = () => {
   const [showResumeLinks, setShowResumeLinks] = useState(false);
@@ -59,12 +60,12 @@ const MainSection = () => {
             <div ref={dropDownListRef} className={`absolute top-[110%] left-[96px] w-[130.94px] ${showResumeLinks ? 'h-fit visible opacity-100 transition-all ease-in-out duration-300' : 'invisible opacity-0 transition-all ease-in-out duration-300'}`}>
                 <ul className="bg-[#bfbfbf] dark:bg-[#616161] rounded-lg border-2 border-white/20">
                 <li onClick={() => setShowResumeLinks(false)} className="hover:bg-[#0081b4] rounded-md transition ease-out duration-300 mb-[1px]">
-                  <a href={CvEnglish} download className={`flex items-center justify-center h-10 px-1 text-lg `}>
+                  <a href={Resume} download className={`flex items-center justify-center h-10 px-1 text-lg `}>
                 <MdOutlineFileDownload size='20px' className="mr-[2px]"/>CV-EN
                 </a>
                   </li>
                   <li onClick={() => setShowResumeLinks(false)} className="hover:bg-[#0081b4] rounded-md transition ease-out duration-300">
-                  <a href={CvEnglish} download className={`flex items-center justify-center h-10 px-1 text-lg `}>
+                  <a href={ResumeES} download className={`flex items-center justify-center h-10 px-1 text-lg `}>
                 <MdOutlineFileDownload size='20px' className="mr-[2px]"/>CV-ES
                 </a>
                   </li>
