@@ -37,7 +37,7 @@ const Form = () => {
         <p className="my-2">Your Email</p>
         <input type="email" ref={emailRef} name="email" required placeholder="Enter your email" className="placeholder-black dark:placeholder-white w-full p-3 rounded-md bg-[#dcd8d9] dark:bg-[#303030] focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"/>
         <p className="my-2">Write your message here</p>
-        <textarea name="message" ref={textRef} required placeholder="Enter your message" className="placeholder-black dark:placeholder-white w-full p-3 rounded-md bg-[#dcd8d9] dark:bg-[#303030] h-[150px] focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"></textarea>
+        <textarea name="message" ref={textRef} required placeholder="Enter your message" className="placeholder-black dark:placeholder-white resize-y w-full p-3 rounded-md bg-[#dcd8d9] dark:bg-[#303030] h-[150px] min-h-12 max-h-80 focus:outline-none focus:border-[#00a8e8] focus:ring-1 focus:ring-[#00a8e8]"></textarea>
         <button className="rounded-full bg-[#00a8e8] py-4 px-8 text-lg mt-3 hover:bg-[#0081b4] transition ease-out hover:scale-110 duration-300" type="submit">Submit Now</button>
     </form>
     {error && <p className="mt-3 ">{error}</p>}
