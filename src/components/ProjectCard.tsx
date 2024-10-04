@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: Props) => {
         <h3 className="text-[#00a8e8] text-3xl font-semibold mb-3">
           {project.title}
         </h3>
-        <div className={`mb-3 [&_*]:mr-2 lg:flex w-full`}>
+        <div className={`[&_*]:mr-2 lg:flex w-full`}>
           {project.stack.map((technology) => badges[technology])}
         </div>
         <p className="text-base mb-3">{project.description}</p>
