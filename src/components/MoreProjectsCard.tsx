@@ -21,7 +21,7 @@ const MoreProjectsCard = ({ project }: Props) => {
   };
 
   return (
-    <div className="p-4 mt-5 border-2 border-black/10 dark:border-white/10 rounded-lg transition ease-out hover:scale-105 duration-300 hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50">
+    <div className="p-4 mt-5 border-2 border-black/10 dark:border-white/10 rounded-lg transition ease-out duration-300 hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50">
       <div className="flex justify-end ">
         <a
           target="_blank"

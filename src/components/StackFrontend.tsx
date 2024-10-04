@@ -7,7 +7,7 @@ import css from '../assets/icons/css.svg'
 
 const StackFrontend = () => {
   return (
-    <div className='flex flex-col border-2 border-black/10 dark:border-white/10 rounded-lg p-5 transition ease-out hover:scale-105 hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50 duration-300'>
+    <div className='flex flex-col border-2 border-black/10 dark:border-white/10 rounded-lg p-5 transition ease-out hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50 duration-300'>
             <h3 className='flex justify-center text-3xl font-semibold text-[#00a8e8] mb-3'>Frontend</h3>
             {/* row */}
             <div className='grid grid-cols-3 mb-3'>

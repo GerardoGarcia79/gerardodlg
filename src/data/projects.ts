@@ -40,7 +40,7 @@ const projects: Project[] = [
     title: "Recipe Finder",
     stack: ["React", "TypeScript", "Tailwind CSS"],
     description:
-      "Recipe Finder is an web app to search for recipes and view details. Your can search by ingredients or recipe names, click on a recipe's name to view detailed information. Add or remove a recipe from favorites page.",
+      "Recipe Finder is a web app to search for recipes and view details. Your can search by ingredients or recipe names, click on a recipe's name to view detailed information. Add or remove a recipe from favorites page.",
     github: "https://github.com/GerardoGarcia79/recipe-finder-app",
     demo: "https://recipe-finder-app-gamma.vercel.app/",
     img: recipeFinder,
@@ -50,7 +50,7 @@ const projects: Project[] = [
     title: "Expense Tracker",
     stack: ["React", "TypeScript", "Tailwind CSS"],
     description:
-      "Expense tracker is an web app to manage personal finances. Your can add new expenses with details, filter expenses by category and visualize them with charts as well as the total.",
+      "Expense tracker is a web app to manage personal finances. Your can add new expenses with details, filter expenses by category and visualize them with charts as well as the total.",
     github: "https://github.com/GerardoGarcia79/expense-tracker-app",
     demo: "https://expense-tracker-app-three-xi.vercel.app/",
     img: expenseTracker,
