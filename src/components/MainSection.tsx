@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import gerardo from "../assets/face.webp";
+import logo from "../assets/logo.webp";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin";
 import { faSquareGithub } from "@fortawesome/free-brands-svg-icons/faSquareGithub";
 import { MdOutlineFileDownload } from "react-icons/md";
@@ -35,7 +35,7 @@ const MainSection = () => {
         </p>
         <div className="flex items-center mt-4 relative">
           <a
-            href="https://www.linkedin.com/in/gerardo-de-le%C3%B3n-garc%C3%ADa/"
+            href="https://www.linkedin.com/in/gerardo-de-leon-garcia/"
             target="_blank"
             className="flex items-center mr-2"
           >
@@ -75,7 +75,7 @@ const MainSection = () => {
           </div>
       </div>
       <div className="mx-auto rounded-full overflow-hidden w-60 h-60 md:h-80 md:w-80 md:mt-5 lg:mt-0">
-        <img src={gerardo} alt="Gerardo's photo" />
+        <img src={logo} alt="Logo" className="w-full"/>
       </div>
     </div>
   );

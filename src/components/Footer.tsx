@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="flex">
             <a href="mailto:gerardodlg.dev@gmail.com" className="flex items-center mr-5 bg-[#00a8e8] rounded-lg p-1 hover:bg-[#0081b4] transition ease-out hover:-translate-y-1 hover:scale-110 duration-300">Contact</a>
             <a
-            href="https://www.linkedin.com/in/gerardo-de-le%C3%B3n-garc%C3%ADa/"
+            href="https://www.linkedin.com/in/gerardo-de-leon-garcia/"
             target="_blank"
             className="flex items-center mr-3"
           >
