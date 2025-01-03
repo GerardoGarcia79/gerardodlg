@@ -12,7 +12,7 @@ const MoreProjects = ({ projects }: Props) => {
       {/* TODO: Change lg:grid-cols-3 when adding another project */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-3">
         <MoreProjectsCard project={projects[3]} />
-        <MoreProjectsCard project={projects[4]} />
+        <MoreProjectsCard project={projects[2]} />
       </div>
     </>
   );

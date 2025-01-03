@@ -1,7 +1,12 @@
 import { Project } from "../data/projects";
 import ChakraUiBadge from "./badges/ChakraUiBadge";
+import NextAuthjsBadge from "./badges/NextAuthjsBadge";
+import NextjsBadge from "./badges/NextjsBadge";
+import PrismaBadge from "./badges/PrismaBadge";
+import RadixUIBadge from "./badges/RadixUIBadge";
 import ReactBadge from "./badges/ReactBadge";
 import ReactQueryBadge from "./badges/ReactQueryBadge";
+import SupabaseBadge from "./badges/SupabaseBadge";
 import TailwindCssBadge from "./badges/TailwindCssBadge";
 import TypeScriptBadge from "./badges/TypeScriptBadge";
 import CodeButton from "./buttons/CodeButton";
@@ -14,10 +19,15 @@ interface Props {
 const ProjectCard = ({ project }: Props) => {
   const badges: { [type: string]: JSX.Element } = {
     React: <ReactBadge key={1} />,
-    TypeScript: <TypeScriptBadge key={2} />,
-    "Chakra UI": <ChakraUiBadge key={3} />,
-    "Tailwind CSS": <TailwindCssBadge key={4} />,
-    "React Query": <ReactQueryBadge key={5} />,
+    "Next.js": <NextjsBadge key={2} />,
+    TypeScript: <TypeScriptBadge key={3} />,
+    "NextAuth.js": <NextAuthjsBadge key={4} />,
+    Prisma: <PrismaBadge key={5} />,
+    "Chakra UI": <ChakraUiBadge key={6} />,
+    "Tailwind CSS": <TailwindCssBadge key={7} />,
+    "Radix UI": <RadixUIBadge key={8} />,
+    "React Query": <ReactQueryBadge key={9} />,
+    Supabase: <SupabaseBadge key={10} />,
   };
 
   return (
@@ -35,7 +45,7 @@ const ProjectCard = ({ project }: Props) => {
         <h3 className="text-[#00a8e8] text-3xl font-semibold mb-3">
           {project.title}
         </h3>
-        <div className={`[&_*]:mr-2 lg:flex w-full`}>
+        <div className={`[&_*]:mr-2 w-full`}>
           {project.stack.map((technology) => badges[technology])}
         </div>
         <p className="text-base mb-3">{project.description}</p>

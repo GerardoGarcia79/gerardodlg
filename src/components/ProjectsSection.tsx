@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectsSection = () => {
   const gameHub = projects[0];
   const eCommerceStorefront = projects[1];
-  const recipeFinder = projects[2];
+  const issueTracker = projects[4];
   const allProjects = projects;
 
   return (
@@ -14,10 +14,10 @@ const ProjectsSection = () => {
         {" "}
         <span className="text-[#00a8e8]">{`</ >`}</span> Projects
       </h2>
-      <div className="">
+      <div>
+        <ProjectCard project={issueTracker} />
         <ProjectCard project={gameHub} />
         <ProjectCard project={eCommerceStorefront} />
-        <ProjectCard project={recipeFinder} />
         <MoreProjects projects={allProjects} />
       </div>
     </div>
