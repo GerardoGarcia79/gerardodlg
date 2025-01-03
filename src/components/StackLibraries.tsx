@@ -64,7 +64,7 @@ const StackLibraries = () => {
       </div>
       {/* row */}
       <div className="grid grid-cols-3 mb-3">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center col-start-2">
           <img src={Zod} alt="Zod logo" className="w-12 h-12 rounded-sm" />
           <p className="text-sm mt-1">Zod</p>
         </div>

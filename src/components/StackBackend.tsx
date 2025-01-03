@@ -11,12 +11,12 @@ const StackBackend = () => {
   }, [htmlElement.classList]);
 
   return (
-    <div className="flex flex-col border-2 border-black/10 dark:border-white/10 rounded-lg p-5 transition ease-out hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50 duration-300">
+    <div className="lg:col-start-2 flex flex-col border-2 border-black/10 dark:border-white/10 rounded-lg p-5 transition ease-out hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50 duration-300">
       <h3 className="flex justify-center text-3xl font-semibold text-[#00a8e8] mb-3">
         Backend
       </h3>
       {/* row */}
-      <div className="grid grid-cols-3 mb-3">
+      <div className="grid grid-cols-2 mb-3 h-full">
         <div className="flex flex-col items-center justify-center">
           <img src={mysql} alt="MySQL logo" className="w-12 h-12 rounded-sm" />
           <p className="text-sm mt-1">MySQL</p>
