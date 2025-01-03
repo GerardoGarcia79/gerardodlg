@@ -3,6 +3,7 @@ import eCommerce from "../assets/e-commerce.webp";
 import recipeFinder from "../assets/recipe-finder.webp";
 import expenseTracker from "../assets/expense-tracker.webp";
 import moshify from "../assets/moshify.webp";
+import issueTracker from "../assets/issue-tracker.webp";
 
 export interface Project {
   id: number;
@@ -57,6 +58,23 @@ const projects: Project[] = [
   },
   {
     id: 5,
+    title: "Issue Tracker",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Radix UI",
+      "NextAuth.js",
+      "Supabase",
+      "Prisma",
+    ],
+    description:
+      "The Issue Tracker Application is a full-stack project with a modern interface, enabling issue management through features like creating, updating, deleting, and assigning issues, along with summaries, charts, pagination, sorting, filtering, and secure role-based access control.",
+    github: "https://github.com/GerardoGarcia79/issue-tracker",
+    demo: "https://issue-tracker-eight-henna.vercel.app",
+    img: issueTracker,
+  },
+  {
+    id: 6,
     title: "Moshify",
     stack: ["HTML", "CSS"],
     description:
