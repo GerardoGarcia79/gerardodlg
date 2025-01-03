@@ -1,46 +1,90 @@
-import react from '../assets/icons/react.svg';
-import ts from '../assets/icons/typescript.svg';
-import js from '../assets/icons/javascript.svg';
-import tailwindCss from '../assets/icons/tailwind-css.svg';
-import html from '../assets/icons/html5.svg';
-import css from '../assets/icons/css.svg'
+import css from "../assets/icons/css.svg";
+import html from "../assets/icons/html5.svg";
+import js from "../assets/icons/javascript.svg";
+import nextJs from "../assets/icons/next-js.svg";
+import react from "../assets/icons/react.svg";
+import tailwindCss from "../assets/icons/tailwind-css.svg";
+import ts from "../assets/icons/typescript.svg";
+import vitest from "../assets/icons/vitest.svg";
+import githubActions from "../assets/icons/github-actions.svg";
 
 const StackFrontend = () => {
   return (
-    <div className='flex flex-col border-2 border-black/10 dark:border-white/10 rounded-lg p-5 transition ease-out hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50 duration-300'>
-            <h3 className='flex justify-center text-3xl font-semibold text-[#00a8e8] mb-3'>Frontend</h3>
-            {/* row */}
-            <div className='grid grid-cols-3 mb-3'>
-                <div className='flex flex-col items-center justify-center'>
-                    <img src={react} alt="React logo" className='w-12 h-12 rounded-sm' />
-                    <p className='text-sm mt-1'>React</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                    <img src={ts} alt="TypeScript logo" className='w-12 h-12 rounded-sm' />
-                    <p className='text-sm mt-1'>TypeScript</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                    <img src={js} alt="JavaScript logo" className='w-12 h-12 rounded-sm' />
-                    <p className='text-sm mt-1'>JavaScript</p>
-                </div>
-            </div>
-            {/* row */}
-            <div className='grid grid-cols-3 mb-3'>
-                <div className='flex flex-col items-center justify-center'>
-                    <img src={tailwindCss} alt="Tailwind CSS logo" className='w-12 h-12 rounded-sm' />
-                    <p className='text-sm mt-1'>TailwindCSS</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                    <img src={html} alt="HTML5 logo" className='w-12 h-12 rounded-sm' />
-                    <p className='text-sm mt-1'>HTML5</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                    <img src={css} alt="CSS3 logo" className='w-12 h-12 rounded-sm' />
-                    <p className='text-sm mt-1'>CSS3</p>
-                </div>
-            </div>
+    <div className="flex flex-col border-2 border-black/10 dark:border-white/10 rounded-lg p-5 transition ease-out hover:border-[#00a8e8]/50 dark:hover:border-[#00a8e8]/50 duration-300">
+      <h3 className="flex justify-center text-3xl font-semibold text-[#00a8e8] mb-3">
+        Frontend
+      </h3>
+      {/* row */}
+      <div className="grid grid-cols-3 mb-3">
+        <div className="flex flex-col items-center justify-center">
+          <img src={react} alt="React logo" className="w-12 h-12 rounded-sm" />
+          <p className="text-sm mt-1">React</p>
         </div>
-  )
-}
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={ts}
+            alt="TypeScript logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-sm mt-1">TypeScript</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={js}
+            alt="JavaScript logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-sm mt-1">JavaScript</p>
+        </div>
+      </div>
+      {/* row */}
+      <div className="grid grid-cols-3 mb-3">
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={tailwindCss}
+            alt="Tailwind CSS logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-sm mt-1">TailwindCSS</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img src={html} alt="HTML5 logo" className="w-12 h-12 rounded-sm" />
+          <p className="text-sm mt-1">HTML5</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img src={css} alt="CSS3 logo" className="w-12 h-12 rounded-sm" />
+          <p className="text-sm mt-1">CSS3</p>
+        </div>
+      </div>
+      {/* row */}
+      <div className="grid grid-cols-3 mb-3">
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={nextJs}
+            alt="Next.js logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-sm mt-1">Next.js</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={vitest}
+            alt="Vitest logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-sm mt-1">Vitest</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={githubActions}
+            alt="Github Actions logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-xs mt-1">GitHub Actions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default StackFrontend
+export default StackFrontend;
