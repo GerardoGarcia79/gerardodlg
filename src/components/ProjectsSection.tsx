@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         {" "}
         <span className="text-[#00a8e8]">{`</ >`}</span> Projects
       </h2>
-      <div className="">
+      <div>
         <ProjectCard project={issueTracker} />
         <ProjectCard project={gameHub} />
         <ProjectCard project={eCommerceStorefront} />

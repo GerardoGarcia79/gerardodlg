@@ -19,7 +19,7 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Game Hub",
-    stack: ["React", "TypeScript", "Chakra UI", "React Query"],
+    stack: ["React", "TypeScript", "React Query", "Chakra UI"],
     description:
       "Game Hub is a video game discovery web app that helps you find new and interesting games to play. With GameHub, you can search for games by platform, genre, and more. Click on a game's title, to see details.",
     github: "https://github.com/GerardoGarcia79/game-hub",
@@ -62,10 +62,10 @@ const projects: Project[] = [
     stack: [
       "Next.js",
       "TypeScript",
-      "Radix UI",
       "NextAuth.js",
       "Supabase",
       "Prisma",
+      "Radix UI",
     ],
     description:
       "The Issue Tracker Application is a full-stack project with a modern interface, enabling issue management through features like creating, updating, deleting, and assigning issues, along with summaries, charts, pagination, sorting, filtering, and secure role-based access control.",
