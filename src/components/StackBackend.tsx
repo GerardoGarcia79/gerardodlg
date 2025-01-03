@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import mysql from "../assets/icons/mysql.svg";
 import prismaDark from "../assets/icons/Prisma_dark.svg";
 import prismaLight from "../assets/icons/Prisma_light.svg";
+import supabase from "../assets/icons/supabase.svg";
 
 const StackBackend = () => {
   const [theme, setTheme] = useState(false);
@@ -16,7 +17,7 @@ const StackBackend = () => {
         Backend
       </h3>
       {/* row */}
-      <div className="grid grid-cols-2 mb-3 h-full">
+      <div className="grid grid-cols-3 mb-3 h-full">
         <div className="flex flex-col items-center justify-center">
           <img src={mysql} alt="MySQL logo" className="w-12 h-12 rounded-sm" />
           <p className="text-sm mt-1">MySQL</p>
@@ -28,6 +29,14 @@ const StackBackend = () => {
             className="w-12 h-12 rounded-sm"
           />
           <p className="text-sm mt-1">Prisma</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            src={supabase}
+            alt="Supabase logo"
+            className="w-12 h-12 rounded-sm"
+          />
+          <p className="text-sm mt-1">Supabase</p>
         </div>
       </div>
     </div>
